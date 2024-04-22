@@ -2,7 +2,7 @@ import BaseController from "./BaseController";
 import TransactionController from "sap/ui/generic/app/transaction/TransactionController";
 import UIComponent from "sap/ui/core/UIComponent";
 import includeScript from "sap/ui/dom/includeScript";
-import Paypal from "../model/paypal";
+import Paypal from "../paypal/paypal";
 import ODataModel from "sap/ui/model/odata/v2/ODataModel";
 import Event from "sap/ui/base/Event";
 import Table from "sap/m/Table";
@@ -12,13 +12,7 @@ import Text from "sap/m/Text";
 import ObjectNumber from "sap/m/ObjectNumber";
 import Context from "sap/ui/model/odata/v2/Context";
 import MessageBox from "sap/m/MessageBox";
-
-interface DraftResponse {
-  context: Context;
-}
-interface FunctionImportResponse {
-  results: [];
-}
+import { FunctionImportResponse, DraftResponse } from "zpaypal_donation/common/types";
 
 /**
  * @namespace zpaypal_donation

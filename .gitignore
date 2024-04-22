@@ -10,5 +10,6 @@ archive.zip
 .*_mta_build_tmp
 .vscode
 paypal.*
+paypal
 *.yaml
 package-lock.json
