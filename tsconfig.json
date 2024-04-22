@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es2022",
+        "module": "es2022",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "allowJs": true,
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "rootDir": "./webapp",
+        "baseUrl": "./",
+        "paths": {
+            "zpaypal_donation/*": ["./webapp/*"]
+        },
+        "typeRoots": [
+            "./node_modules/@types",
+            "./node_modules/@sapui5/ts-types-esm"
+        ],
+        "composite": true
+    },
+    "include": ["./webapp/**/*"]
+}

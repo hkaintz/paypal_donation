@@ -1,0 +1,64 @@
+<mvc:View controllerName="zpaypal_donation.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+    xmlns="sap.m">
+
+    <Page id="main-page">
+
+        <l:ResponsiveSplitter id="mainSplitter"
+            defaultPane="default">
+
+            <l:PaneContainer id="makeDonationPaneContainer"
+                orientation="Vertical">
+
+                <l:PaneContainer id="donationsPaneContainer3"
+                    orientation="Horizontal">
+
+                    <l:SplitPane requiredParentWidth="300"
+                        id="default">
+                        <l:layoutData>
+                            <l:SplitterLayoutData id="defaultSplitterLayoutData"
+                                size="auto" />
+                        </l:layoutData>
+                        <core:Fragment fragmentName="zpaypal_donation.view.fragment.MakeDonation"
+                            type="XML" />
+                    </l:SplitPane>
+
+                    <l:SplitPane requiredParentWidth="300"
+                        id="default3">
+                        <l:layoutData>
+                            <l:SplitterLayoutData id="defaultSplitterLayoutData3"
+                                size="auto" />
+                        </l:layoutData>
+                        <Text id="text3"
+                            text="text" />
+                    </l:SplitPane>
+                </l:PaneContainer>
+
+                <l:PaneContainer id="donationsPaneContainer"
+                    orientation="Horizontal">
+                    <l:SplitPane id="SplitPane1"
+                        requiredParentWidth="600">
+                        <l:layoutData>
+                            <l:SplitterLayoutData id="_IDGenSplitterLayoutData1"
+                                size="auto" />
+                        </l:layoutData>
+                        <Text id="text1"
+                            text="text" />
+                    </l:SplitPane>
+                    <l:SplitPane id="SplitPane2"
+                        requiredParentWidth="800">
+                        <l:layoutData>
+                            <l:SplitterLayoutData id="_IDGenSplitterLayoutData2"
+                                size="auto" />
+                        </l:layoutData>
+                        <core:Fragment fragmentName="zpaypal_donation.view.fragment.MyDrafts"
+                            type="XML" />
+                    </l:SplitPane>
+                </l:PaneContainer>
+            </l:PaneContainer>
+        </l:ResponsiveSplitter>
+    </Page>
+</mvc:View>

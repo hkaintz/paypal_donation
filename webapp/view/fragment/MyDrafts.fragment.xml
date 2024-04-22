@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core">
+
+	<Table id="myDraftsTable"
+		itemPress="onMyDraftItemPress"
+		mode="Delete"
+		delete="onMyDraftDeletePress">
+		<headerToolbar>
+			<OverflowToolbar id="_IDGenOverflowToolbar1">
+				<Title id="_IDGenTitle1"
+					text="My Drafts" />
+				<ToolbarSpacer id="_IDGenToolbarSpacer1" />
+				<Button id="_IDGenButton1"
+					icon="sap-icon://add"
+					press="onCreateDonationDraftPress"/>
+			</OverflowToolbar>
+		</headerToolbar>
+
+		<columns>
+			<Column id="_IDGenColumn1"
+				width="auto">
+				<Text id="_IDGenText1"
+					text="Name" />
+			</Column>
+			<Column id="_IDGenColumn2"
+				width="30%">
+				<Text id="_IDGenText2"
+					text="Donation" />
+			</Column>
+		</columns>
+
+	</Table>
+
+</core:FragmentDefinition>
