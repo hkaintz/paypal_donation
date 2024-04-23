@@ -5,21 +5,22 @@
     displayBlock="true"
     xmlns="sap.m">
 
-    <Page id="main-page">
+    <Page id="mainPage"
+        showHeader="false">
 
         <l:ResponsiveSplitter id="mainSplitter"
-            defaultPane="default">
+            defaultPane="makeDonationSplitPane">
 
-            <l:PaneContainer id="makeDonationPaneContainer"
+            <l:PaneContainer id="rootPaneContainer"
                 orientation="Vertical">
 
-                <l:PaneContainer id="donationsPaneContainer3"
+                <l:PaneContainer id="topPaneContainer"
                     orientation="Horizontal">
 
                     <l:SplitPane requiredParentWidth="300"
-                        id="default">
+                        id="makeDonationSplitPane">
                         <l:layoutData>
-                            <l:SplitterLayoutData id="defaultSplitterLayoutData"
+                            <l:SplitterLayoutData id="makeDonationSplitterLayoutData"
                                 size="auto" />
                         </l:layoutData>
                         <core:Fragment fragmentName="zpaypal_donation.view.fragment.MakeDonation"
@@ -27,36 +28,46 @@
                     </l:SplitPane>
 
                     <l:SplitPane requiredParentWidth="300"
-                        id="default3">
+                        id="searchDonationSplitPane">
                         <l:layoutData>
-                            <l:SplitterLayoutData id="defaultSplitterLayoutData3"
+                            <l:SplitterLayoutData id="searchDonationSplitterLayoutData"
                                 size="auto" />
                         </l:layoutData>
-                        <Text id="text3"
-                            text="text" />
+                        <FlexBox id="searchDonationFlexBox"
+                            alignContent="Center"
+                            alignItems="Center"
+                            justifyContent="Center"
+                            fitContainer="true">
+                            <SearchField id="searchDonationInput"
+                                width="30rem"
+                                search="onDonationSearch"/>
+                        </FlexBox>
+
                     </l:SplitPane>
                 </l:PaneContainer>
 
-                <l:PaneContainer id="donationsPaneContainer"
+                <l:PaneContainer id="lowerPaneContainer"
                     orientation="Horizontal">
-                    <l:SplitPane id="SplitPane1"
+
+                    <l:SplitPane id="allDonationsSplitPane"
                         requiredParentWidth="600">
                         <l:layoutData>
-                            <l:SplitterLayoutData id="_IDGenSplitterLayoutData1"
+                            <l:SplitterLayoutData id="allDonationsSplitterLayoutData"
                                 size="auto" />
                         </l:layoutData>
-                        <Text id="text1"
-                            text="text" />
+                        <core:Fragment fragmentName="zpaypal_donation.view.fragment.AllDonations"
+                            type="XML" />
                     </l:SplitPane>
-                    <l:SplitPane id="SplitPane2"
+                    <l:SplitPane id="myDraftsSplitPane"
                         requiredParentWidth="800">
                         <l:layoutData>
-                            <l:SplitterLayoutData id="_IDGenSplitterLayoutData2"
+                            <l:SplitterLayoutData id="myDraftsSplitterLayoutData"
                                 size="auto" />
                         </l:layoutData>
                         <core:Fragment fragmentName="zpaypal_donation.view.fragment.MyDrafts"
                             type="XML" />
                     </l:SplitPane>
+
                 </l:PaneContainer>
             </l:PaneContainer>
         </l:ResponsiveSplitter>

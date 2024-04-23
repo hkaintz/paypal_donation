@@ -40,8 +40,7 @@ export default class ErrorHandler extends Element {
   }
 
   private _onNewMessageFromV2Service(event: Event) {
-    // @ts-ignore
-    const newMessages = event.getParameter("newMessages") as Array<Message>;
+    const newMessages = event.getParameter("newMessages" as never) as Array<Message>;
     if (newMessages && newMessages.length) {
       newMessages.forEach((message: Message): void => this._addMessageToMessages(message));
     }

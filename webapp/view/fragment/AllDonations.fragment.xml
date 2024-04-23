@@ -1,0 +1,45 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core">
+
+	<Table id="allDonationsTable"
+		sticky="ColumnHeaders,HeaderToolbar"
+		selectionChange="onAllDonationsSelectionChange"
+		itemPress="onAllDonationsItemPress"
+		mode="SingleSelectLeft">
+		<headerToolbar>
+			<OverflowToolbar id="allDonationsTableOverflowToolbar">
+				<Title id="a"
+					text="All Donations" />
+				<ToolbarSpacer id="allDonationsTableToolbarSpacer" />
+
+				<Button id="allDonationsTableEditButton"
+					icon="sap-icon://edit"
+					enabled="false"
+					press="onEditDonationPress"/>
+
+				<Button id="allDonationsTableDeleteButton"
+					icon="sap-icon://delete"
+					enabled="false"
+					press="onDeleteDonationPress"/>
+			</OverflowToolbar>
+		</headerToolbar>
+
+		<columns>
+			<Column id="allDonationsTableNameColumn"
+				width="auto">
+				<Text id="allDonationsTableNameText"
+					text="Name" />
+			</Column>
+			<Column id="allDonationsTableDonationColumn"
+				width="30%">
+				<Text id="allDonationsTableDonationText"
+					text="Donation" />
+			</Column>
+			<Column id="allDonationsTableStatusColumn">
+				<Text id="allDonationsTableStatusText"
+					text="Status" />
+			</Column>
+		</columns>
+	</Table>
+</core:FragmentDefinition>

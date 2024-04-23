@@ -6,39 +6,36 @@
 	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 	xmlns:core="sap.ui.core">
 
-	<l:HorizontalLayout id="_IDGenHorizontalLayout1"
+	<l:HorizontalLayout id="makeDonationHorizontalLayout"
 		class="sapUiContentPadding">
 
-		<smartForm:SmartForm id="smartForm"
+		<smartForm:SmartForm id="donationSmartForm"
 			editable="true"
 			app:defaultCheckBoxDisplayBehaviour="OnOff"
 			app:defaultDropDownDisplayBehaviour="idAndDescription"
 			editTogglable="false"
 			validationMode="Async"
 			title="Make a Donation">
-			<smartForm:Group id="_IDGenGroup1">
-				<smartForm:GroupElement id="_IDGenGroupElement1">
-					<smartField:SmartField id="_IDGenSmartField1"
+			<smartForm:Group id="donationSmartFormGroup">
+				<smartForm:GroupElement id="donationSmartFormFirstNameGroupElement">
+					<smartField:SmartField id="donationSmartFormFirstNameSmartField"
 						value="{FirstName}" />
 				</smartForm:GroupElement>
-				<smartForm:GroupElement id="_IDGenGroupElement2">
-					<smartField:SmartField id="_IDGenSmartField2"
+				<smartForm:GroupElement id="donationSmartForLastNameGroupElement">
+					<smartField:SmartField id="donationSmartFormLastNameSmartField"
 						value="{LastName}" />
 				</smartForm:GroupElement>
-
-				<smartForm:GroupElement id="_IDGenGroupElement3">
-					<smartField:SmartField id="_IDGenSmartField3"
+				<smartForm:GroupElement id="donationSmartFormValueGroupElement">
+					<smartField:SmartField id="donationSmartFormValueSmartField"
 						value="{Value}" />
 				</smartForm:GroupElement>
-
 			</smartForm:Group>
 		</smartForm:SmartForm>
 
-		<FlexBox id="paypal-button-container"
+		<FlexBox id="paypalButtonContainer"
 			alignContent="Center"
 			alignItems="Center"
 			justifyContent="Center" />
 
 	</l:HorizontalLayout>
-
 </core:FragmentDefinition>

@@ -7,25 +7,28 @@
 		mode="Delete"
 		delete="onMyDraftDeletePress">
 		<headerToolbar>
-			<OverflowToolbar id="_IDGenOverflowToolbar1">
-				<Title id="_IDGenTitle1"
+			<OverflowToolbar id="myDraftsTableOverflowToolbar">
+				<Title id="myDraftsTableTitle"
 					text="My Drafts" />
-				<ToolbarSpacer id="_IDGenToolbarSpacer1" />
-				<Button id="_IDGenButton1"
+				<ToolbarSpacer id="myDraftsTableToolbarSpacer" />
+				<Button id="myDraftsTableAddButton"
 					icon="sap-icon://add"
 					press="onCreateDonationDraftPress"/>
+				<Button id="myDraftsTableDeleteAllButton"
+					icon="sap-icon://clear-all"
+					press="onDeleteAllDraftsPress"/>
 			</OverflowToolbar>
 		</headerToolbar>
 
 		<columns>
-			<Column id="_IDGenColumn1"
+			<Column id="myDraftsTableNameColumn"
 				width="auto">
-				<Text id="_IDGenText1"
+				<Text id="myDraftsTableNameText"
 					text="Name" />
 			</Column>
-			<Column id="_IDGenColumn2"
+			<Column id="myDraftsTableDonationColumn"
 				width="30%">
-				<Text id="_IDGenText2"
+				<Text id="myDraftsTableDonationText"
 					text="Donation" />
 			</Column>
 		</columns>
