@@ -17,6 +17,11 @@
 					icon="sap-icon://edit"
 					enabled="false"
 					press="onEditDonationPress"/>
+			
+				<Button id="allDonationsTableSaveButton"
+					icon="sap-icon://save"
+					enabled="false"
+					press="onSaveDonationPress"/>
 
 				<Button id="allDonationsTableDeleteButton"
 					icon="sap-icon://delete"
@@ -35,6 +40,11 @@
 				width="30%">
 				<Text id="allDonationsTableDonationText"
 					text="Donation" />
+			</Column>
+			<Column id="allDonationsTablePaidColumn"
+				width="4rem">
+				<Text id="allDonationsTablePaidText"
+					text="Paid" />
 			</Column>
 			<Column id="allDonationsTableStatusColumn">
 				<Text id="allDonationsTableStatusText"
