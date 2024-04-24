@@ -221,10 +221,12 @@ export default class Main extends BaseController {
 			filters: [
 				new Filter({
 					filters: [
+						// ! Only drafts
 						new Filter("IsActiveEntity", "EQ", false),
+						// ! No sibling entity in draft mode
 						new Filter("SiblingEntity/IsActiveEntity", "EQ", null)
 					],
-					and: false
+					and: false // ! OR
 				})
 			],
 			template: this._getAllDonationsTableTemplate()
@@ -387,10 +389,12 @@ export default class Main extends BaseController {
 					new Filter("DonationID", "EQ", donationId),
 					new Filter({
 						filters: [
+							// ! No sibling entity in draft mode
 							new Filter("SiblingEntity/IsActiveEntity", "EQ", null),
+							// ! Only drafts
 							new Filter("IsActiveEntity", "EQ", false)
 						],
-						and: false
+						and: false // ! OR
 					})
 				],
 				success: (response: FunctionImportResponse) => {

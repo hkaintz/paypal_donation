@@ -40,9 +40,8 @@
                             fitContainer="true">
                             <SearchField id="searchDonationInput"
                                 width="30rem"
-                                search="onDonationSearch"/>
+                                search="onDonationSearch" />
                         </FlexBox>
-
                     </l:SplitPane>
                 </l:PaneContainer>
 
